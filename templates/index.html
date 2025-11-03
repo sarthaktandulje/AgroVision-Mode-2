@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroVision - Tomato Disease Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🍅 AgroVision - Tomato Disease Detector</h1>
+    <p>Upload an image of a tomato leaf and let the AI identify the disease!</p>
+
+    <div class="upload-box">
+      <input type="file" id="imageUpload" accept="image/*">
+      <button onclick="predictDisease()">Detect Disease</button>
+    </div>
+
+    <div id="output">
+      <img id="preview" src="#" alt="Image Preview">
+      <h2 id="result"></h2>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
