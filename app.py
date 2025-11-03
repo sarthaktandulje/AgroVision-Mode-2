@@ -8,7 +8,8 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Paths
-MODEL_PATH = "model/AgroVision_model.h5"   # relative path
+MODEL_PATH = "model/AgroVision_model.h5"
+
 UPLOAD_FOLDER = "static/uploaded_images"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
@@ -94,4 +95,6 @@ def predict():
         return jsonify({"error": f"Prediction error: {e}"})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+     import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
