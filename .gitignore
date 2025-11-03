@@ -1,0 +1,38 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+ENV/
+env/
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.swp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Flask and temp files
+instance/
+*.log
+
+# Ignore Jupyter notebooks checkpoints
+.ipynb_checkpoints
+
+# Ignore model-related large files
+# *.h5
+# *.hdf5
+# *.ckpt
+
+# Ignore uploads and datasets (optional)
+uploads/
+data/
+datasets/
+
+# Ignore git itself
+.gitignore
